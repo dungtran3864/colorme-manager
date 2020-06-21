@@ -1,7 +1,6 @@
 import React from 'react';
-import {Dimensions, Text, TouchableOpacity, View} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import ScalableImage from 'react-native-scalable-image';
+import {Dimensions, Image, Text, TouchableOpacity, View} from 'react-native';
+var {height, width} = Dimensions.get('window');
 
 export default class CardMenu extends React.Component {
   constructor(props) {
@@ -10,30 +9,30 @@ export default class CardMenu extends React.Component {
 
   render() {
     return (
-      <TouchableOpacity onPress={this.props.onPress}>
-        <LinearGradient
-          colors={[this.props.colorOne, this.props.colorTwo]}
-          style={this.props.checkInOutStyle}>
-          <Text style={[styles.featureTitle, this.props.standOutFontSize]}>
-            {this.props.title}
-          </Text>
-        </LinearGradient>
-        <View style={this.props.characterImgPosition}>
-          <ScalableImage
-            source={this.props.imageSource}
-            width={this.props.imageWidth}
-          />
-        </View>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={this.props.onPress}>
+          <View style={[styles.cardContainer, this.props.extraPadding]}>
+            <Image source={this.props.icon} style={styles.icon} />
+            <Text numberOfLines={2} style={styles.featureTitle}>
+              {this.props.title}
+            </Text>
+          </View>
+        </TouchableOpacity>
     );
   }
 }
 
 const styles = {
-  featureTitle: {
-    marginLeft: 8,
-    marginTop: 12,
-    fontWeight: 'bold',
-    color: 'white',
+  cardContainer: {
+    alignItems: 'center',
+    width: (width - 20) / 3
   },
+  featureTitle: {
+    color: 'white',
+    marginVertical: 5,
+    textAlign: 'center'
+  },
+  icon: {
+    width: 52,
+    height: 52
+  }
 };

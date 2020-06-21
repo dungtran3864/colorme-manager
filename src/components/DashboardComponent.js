@@ -131,50 +131,35 @@ class DashboardComponent extends React.Component {
               <Text style={styles.searchInput}>Tìm kiếm học viên</Text>
             </View>
           </TouchableOpacity>
-          <View style={styles.mainFeatureLine}>
-            <CardMenu
-              colorOne={'#E26800'}
-              colorTwo={'#E2DC50'}
-              checkInOutStyle={styles.checkInContainer}
-              standOutFontSize={{fontSize: 17}}
-              imageSource={require('../../assets/img/MiM-check-in.png')}
-              imageWidth={(width - 32) * 0.38}
-              title={'Check in'}
-              characterImgPosition={styles.checkInCharacterImgPosition}
-              onPress={() => {
-                this.props.navigation.navigate('CheckIn', {
-                  title: 'Check in',
-                  type: 'checkin',
-                });
-              }}
-            />
-            <CardMenu
-              colorOne={'#6800E2'}
-              colorTwo={'#2F94EB'}
-              checkInOutStyle={styles.checkOutContainer}
-              imageSource={require('../../assets/img/MiM-check-out.png')}
-              imageWidth={(width - 32) * 0.3 * 0.7}
-              title={'Check out'}
-              characterImgPosition={styles.checkOutCharacterImgPosition}
-              onPress={() => {
-                this.props.navigation.navigate('CheckOut', {
-                  title: 'Check out',
-                  type: 'checkout',
-                });
-              }}
-            />
-            <CardMenu
-              colorOne={'#E20000'}
-              colorTwo={'#E29950'}
-              checkInOutStyle={styles.checkOutContainer}
-              imageSource={require('../../assets/img/MiM-history.png')}
-              imageWidth={(width - 32) * 0.26 * 0.9}
-              title={'Lịch sử'}
-              characterImgPosition={styles.historyCharacterImgPosition}
-              onPress={() => {
-                this.props.navigation.navigate('HistoryAllAttendance');
-              }}
-            />
+          <View style={styles.mainFeatureContainer}>
+            <View style={styles.headerMainContainer}>
+              <Text style={styles.headerMainText}>Điểm danh</Text>
+            </View>
+            <View style={styles.mainFeatureLine}>
+              <CardMenu extraPadding={{paddingRight: 10}}
+                        icon={require('../../assets/img/checkInIcon.png')}
+                        title={'Check In'}
+                        onPress={() => {
+                          this.props.navigation.navigate('CheckIn', {
+                            title: 'Check in',
+                            type: 'checkin',
+                          });
+                        }}/>
+              <CardMenu icon={require('../../assets/img/checkOutIcon.png')}
+                        title={'Check Out'}
+                        onPress={() => {
+                          this.props.navigation.navigate('CheckOut', {
+                            title: 'Check out',
+                            type: 'checkout',
+                          });
+                        }}/>
+              <CardMenu extraPadding={{paddingLeft: 10}}
+                        icon={require('../../assets/img/historyIcon.png')}
+                        title={'Lịch Sử'}
+                        onPress={() => {
+                          this.props.navigation.navigate('HistoryAllAttendance');
+                        }}/>
+            </View>
           </View>
           <View style={styles.otherFeatureLine}>
             <CircleTab
@@ -302,43 +287,6 @@ const styles = {
     marginTop: 16,
     marginHorizontal: theme.mainHorizontal,
   },
-  // 32 is the total left, right margin,
-  // 0.40 is the relative ratio of container to screen width,
-  // (178/139) is the ratio between height and width
-  checkInContainer: {
-    height: (Dimensions.get('window').width - 32) * 0.4 * (178 / 139),
-    width: (Dimensions.get('window').width - 32) * 0.4,
-    borderRadius: 10,
-  },
-  // 32 is the total left, right margin,
-  // 0.26 is the relative ratio of container to screen width,
-  // (178/139) is the ratio between height and width
-  checkOutContainer: {
-    height: (Dimensions.get('window').width - 32) * 0.26 * (178 / 139),
-    width: (Dimensions.get('window').width - 32) * 0.26,
-    borderRadius: 10,
-  },
-  // 32 is the total left, right margin,
-  // 0.18, 0.08 is the relative ratio of image to screen width
-  checkInCharacterImgPosition: {
-    position: 'absolute',
-    top: (Dimensions.get('window').width - 32) * 0.19,
-    left: (Dimensions.get('window').width - 32) * 0.06,
-  },
-  // 32 is the total left, right margin,
-  // 0.15, 0.09 is the relative ratio of image to screen width
-  checkOutCharacterImgPosition: {
-    position: 'absolute',
-    top: (Dimensions.get('window').width - 32) * 0.15,
-    left: (Dimensions.get('window').width - 32) * 0.07,
-  },
-  // 32 is the total left, right margin,
-  // 0.14, 0.06 is the relative ratio of image to screen width
-  historyCharacterImgPosition: {
-    position: 'absolute',
-    top: (Dimensions.get('window').width - 32) * 0.15,
-    left: (Dimensions.get('window').width - 32) * 0.05,
-  },
   otherFeatureLine: {
     flexDirection: 'row',
     marginTop: 30,
@@ -395,6 +343,23 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
+  },
+  mainFeatureContainer: {
+    alignItems: 'center',
+    backgroundColor: '#0081FF',
+    marginHorizontal: 10,
+    borderRadius: 6,
+    overflow: 'hidden'
+  },
+  headerMainContainer: {
+    backgroundColor: '#006EE3',
+    paddingVertical: 5,
+    width: width - 20,
+    alignItems: 'center'
+  },
+  headerMainText: {
+    color: 'white',
+    fontSize: 16
   },
 };
 

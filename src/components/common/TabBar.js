@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import posed from 'react-native-pose';
 import LinearGradient from 'react-native-linear-gradient';
+import theme from '../../styles';
 
 const windowWidth = Dimensions.get('window').width;
 const tabWidth = windowWidth / 5;
@@ -66,7 +67,7 @@ const TabBar = props => {
         <View style={StyleSheet.absoluteFillObject}>
           <SpotLight style={S.spotLight} pose={`route${activeRouteIndex}`}>
             <LinearGradient
-              colors={['#E26800', '#E00000']}
+                colors={[theme.mainColor, theme.mainColor]}
               style={S.spotLightInner}
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}>

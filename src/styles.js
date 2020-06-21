@@ -2,8 +2,8 @@
  * Created by phanmduong on 4/22/17.
  */
 export default (styles = {
-  mainColor: '#C50000',
-  secondColor: '#d92732',
+  mainColor: '#0080FF',
+  secondColor: '#0080FF',
   secondColorOpacity: '#d9273230',
   processColorOpacity1: '#26a69a30',
   processColor1: '#26a69a',

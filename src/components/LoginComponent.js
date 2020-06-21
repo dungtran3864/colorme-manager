@@ -16,6 +16,7 @@ var {height, width} = Dimensions.get('window');
 import Spinkit from 'react-native-spinkit';
 import theme from '../styles';
 import LinearGradient from 'react-native-linear-gradient';
+import ScalableImage from "react-native-scalable-image";
 
 let self;
 
@@ -83,14 +84,13 @@ class LoginComponent extends React.Component {
           },
         }}>
         {!this.state.isKeyboardShow && (
-          <LinearGradient
-            colors={['#ff0064', '#c51600']}
-            style={styles.containerColorME}>
-            <View style={styles.contentColorME}>
-              <Text style={styles.textColor}>color</Text>
-              <Text style={styles.textME}>ME</Text>
-            </View>
-          </LinearGradient>
+            <LinearGradient
+              colors={[theme.mainColor, theme.mainColor]}
+              style={styles.containerColorME}>
+              <View style={styles.contentColorME}>
+                <ScalableImage source={require('../../assets/img/IEGLoginLogo.png')} width={width * 0.5}/>
+              </View>
+            </LinearGradient>
         )}
         {!this.state.isKeyboardShow && (
           <View style={{flex: 1, backgroundColor: '#fff'}} />
@@ -215,7 +215,7 @@ const styles = {
     alignItems: 'center',
   },
   button: {
-    backgroundColor: '#ff0038',
+    backgroundColor: theme.mainColor,
     position: 'absolute',
     height: 45,
     bottom: -23,
@@ -280,7 +280,7 @@ const styles = {
     alignItems: 'center',
   },
   textTitleInput: {
-    color: '#ff0038',
+    color: theme.mainColor,
     fontWeight: Platform.OS === 'ios' ? 'bold' : 'normal',
     fontFamily: Platform.OS === 'ios' ? 'Segoe UI' : 'SegoeUI-Bold',
   },
