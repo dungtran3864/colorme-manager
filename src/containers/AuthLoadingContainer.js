@@ -9,6 +9,8 @@ import AsyncStorage from '@react-native-community/async-storage';
 import * as loginActions from '../actions/loginActions';
 import {isEmptyInput} from '../helper';
 var {height, width} = Dimensions.get('window');
+import theme from '../styles';
+import ScalableImage from "react-native-scalable-image";
 
 class AuthLoadingContainer extends React.Component {
   constructor(props) {
@@ -55,11 +57,10 @@ class AuthLoadingContainer extends React.Component {
   render() {
     return (
       <LinearGradient
-        colors={['#ff0064', '#c51600']}
+        colors={[theme.mainColor, theme.mainColor]}
         style={styles.containerColorME}>
         <View style={styles.contentColorME}>
-          <Text style={styles.textColor}>color</Text>
-          <Text style={styles.textME}>ME</Text>
+          <ScalableImage source={require('../../assets/img/IEGLoginLogo.png')} width={width * 0.5}/>
         </View>
         <Spinkit isVisible color="white" type="ThreeBounce" size={40} />
       </LinearGradient>
