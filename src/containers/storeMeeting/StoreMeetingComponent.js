@@ -23,6 +23,7 @@ import MultiSelect from './MultiSelect/react-native-multi-select';
 import {convertVietText, isEmptyInput} from '../../helper';
 import Spinkit from 'react-native-spinkit';
 import {CustomPicker} from 'react-native-custom-picker';
+import theme from '../../styles';
 
 var {height, width} = Dimensions.get('window');
 
@@ -325,7 +326,7 @@ class StoreMeetingComponent extends React.Component {
                             key={index}
                             onPress={() => (province.selected = false)}>
                             <LinearGradient
-                              colors={['#E26800', '#E00000']}
+                              colors={[, '#E00000']}
                               start={{x: 0, y: 0}}
                               end={{x: 1, y: 0}}
                               style={styles.tag}>
@@ -361,7 +362,7 @@ class StoreMeetingComponent extends React.Component {
                             key={index}
                             onPress={() => (department.selected = false)}>
                             <LinearGradient
-                              colors={['#E26800', '#E00000']}
+                              colors={[theme.mainColor, theme.mainColor]}
                               start={{x: 0, y: 0}}
                               end={{x: 1, y: 0}}
                               style={styles.tag}>
@@ -410,7 +411,7 @@ class StoreMeetingComponent extends React.Component {
               <TouchableOpacity
                 onPress={() => (isStoring ? null : this.submitStoreMeeting())}>
                 <LinearGradient
-                  colors={['#E26800', '#E00000']}
+                  colors={[theme.mainColor, theme.mainColor]}
                   start={{x: 0, y: 0}}
                   end={{x: 1, y: 0}}
                   style={styles.btnSubmit}>

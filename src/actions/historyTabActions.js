@@ -7,13 +7,14 @@ import HistoryAttendanceTeachingContainer from '../containers/historyAttendanceT
 import React from 'react';
 import HistoryAttendanceWorkShiftContainer from '../containers/historyAttendanceShift/HistoryAttendanceWorkShiftContainer';
 import HistoryAttendanceShiftContainer from '../containers/historyAttendanceShift/HistoryAttendanceShiftContainer';
+import theme from '../styles';
 
 export function tabTeaching() {
   return {
     type: HISTORY_TEACHING_TAB,
     historyTab: {
       teachingShift: {
-        gradient: ['#E26800', '#E00000'],
+        gradient: [theme.mainColor, theme.mainColor],
         textColor: {
           color: 'white',
         },
@@ -40,7 +41,7 @@ export function tabWork() {
     type: HISTORY_WORK_SHIFT_TAB,
     historyTab: {
       workShift: {
-        gradient: ['#E26800', '#E00000'],
+        gradient: [theme.mainColor, theme.mainColor],
         textColor: {
           color: 'white',
         },
@@ -67,7 +68,7 @@ export function tabDuty() {
     type: HISTORY_SHIFT_TAB,
     historyTab: {
       dutyShift: {
-        gradient: ['#E26800', '#E00000'],
+        gradient: [theme.mainColor, theme.mainColor],
         textColor: {
           color: 'white',
         },

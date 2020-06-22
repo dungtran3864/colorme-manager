@@ -371,7 +371,7 @@ class WorkShiftRegisterComponent extends React.Component {
             <View style={[styles.containerPicker, {marginTop: 5}]}>
               <TouchableOpacity onPress={this.toggleModal}>
                 <LinearGradient
-                  colors={['#E26800', '#E00000']}
+                  colors={[theme.mainColor, theme.mainColor]}
                   style={styles.gradientSize}
                   start={{x: 0, y: 0}}
                   end={{x: 1, y: 0}}>
@@ -390,7 +390,7 @@ class WorkShiftRegisterComponent extends React.Component {
                   })
                 }>
                 <LinearGradient
-                  colors={['#E26800', '#E00000']}
+                  colors={[theme.mainColor, theme.mainColor]}
                   style={styles.gradientSize}
                   start={{x: 0, y: 0}}
                   end={{x: 1, y: 0}}>

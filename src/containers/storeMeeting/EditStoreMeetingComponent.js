@@ -337,7 +337,7 @@ class EditStoreMeetingComponent extends React.Component {
                               province.selected = false;
                             }}>
                             <LinearGradient
-                              colors={['#E26800', '#E00000']}
+                              colors={[theme.mainColor, theme.mainColor]}
                               start={{x: 0, y: 0}}
                               end={{x: 1, y: 0}}
                               style={styles.tag}>
@@ -384,7 +384,7 @@ class EditStoreMeetingComponent extends React.Component {
                               department.selected = false;
                             }}>
                             <LinearGradient
-                              colors={['#E26800', '#E00000']}
+                              colors={[theme.mainColor, theme.mainColor]}
                               start={{x: 0, y: 0}}
                               end={{x: 1, y: 0}}
                               style={styles.tag}>
@@ -436,7 +436,7 @@ class EditStoreMeetingComponent extends React.Component {
               <TouchableOpacity
                 onPress={() => (isStoring ? null : this.submitStoreMeeting())}>
                 <LinearGradient
-                  colors={['#E26800', '#E00000']}
+                  colors={[theme.mainColor, theme.mainColor]}
                   start={{x: 0, y: 0}}
                   end={{x: 1, y: 0}}
                   style={styles.btnSubmit}>

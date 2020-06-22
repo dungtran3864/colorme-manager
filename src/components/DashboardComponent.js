@@ -348,6 +348,7 @@ const styles = {
     alignItems: 'center',
     backgroundColor: '#0081FF',
     marginHorizontal: 10,
+    marginTop: 15,
     borderRadius: 6,
     overflow: 'hidden'
   },

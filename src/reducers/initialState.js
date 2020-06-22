@@ -2,6 +2,7 @@ import HistoryAttendanceTeachingContainer from '../containers/historyAttendanceT
 import React from 'react';
 import InfoStudentRegistersContainer from '../containers/infoStudent/InfoStudentRegistersContainer';
 import moment from 'moment';
+import theme from '../styles';
 /**
  * Created by phanmduong on 4/5/17.
  */
@@ -207,7 +208,7 @@ export default {
   },
   historyTab: {
     teachingShift: {
-      gradient: ['#E26800', '#E00000'],
+      gradient: [theme.mainColor, theme.mainColor],
       textColor: {
         color: 'white',
       },

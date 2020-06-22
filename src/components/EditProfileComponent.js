@@ -392,7 +392,7 @@ class EditProfileComponent extends React.Component {
             </View>
             <TouchableOpacity onPress={() => this.updateProfile()}>
               <LinearGradient
-                colors={['#E26800', '#E00000']}
+                colors={[theme.mainColor, theme.mainColor]}
                 start={{x: 0, y: 0}}
                 end={{x: 1, y: 0}}
                 style={styles.btnSubmit}>
