@@ -361,7 +361,7 @@ const styles = {
   },
   cancelTitle: {
     fontSize: 16,
-    color: theme.mainColor,
+    color: theme.dangerColor,
   },
 };
 

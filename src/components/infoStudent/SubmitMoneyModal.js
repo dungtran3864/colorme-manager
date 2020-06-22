@@ -214,7 +214,7 @@ class SubmitMoneyModal extends React.Component {
             </TouchableOpacity>
             <TouchableOpacity onPress={this.props.onSwipeComplete}>
               <View style={styles.cancelContainer}>
-                <Text style={{color: theme.mainColor}}>Hủy</Text>
+                <Text style={{color: theme.dangerColor}}>Hủy</Text>
               </View>
             </TouchableOpacity>
           </ScrollView>
