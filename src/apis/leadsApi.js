@@ -18,7 +18,7 @@ export function getLeads(
   token,
 ) {
   let url =
-    env.MANAGE_API_URL_V3 +
+    env.MANAGE_API_URL +
     '/lead/all?token=' +
     token +
     '&page=' +
@@ -52,12 +52,12 @@ export function getLeads(
 
 export function getStaff(search, token) {
   let url =
-    env.MANAGE_API_URL_V3 + '/get-staffs?search=' + search + '&token=' + token;
+    env.MANAGE_API_URL + '/get-staffs?search=' + search + '&token=' + token;
   return axios.get(url);
 }
 
 export function saveLead(lead, token) {
-  let url = env.MANAGE_API_URL_V3 + '/lead/edit-info?token=' + token;
+  let url = env.MANAGE_API_URL + '/lead/edit-info?token=' + token;
   return axios.put(url, {
     id: lead.id,
     name: lead.name,
