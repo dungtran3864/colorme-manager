@@ -3,7 +3,7 @@ import * as env from '../constants/env';
 
 export function loadDetailShifts(baseId, genId, id, week, token) {
   let url =
-    env.MANAGE_API_URL_V3 +
+    env.MANAGE_API_URL +
     '/work-shift/detail-shifts/' +
     id +
     '?baseId=' +

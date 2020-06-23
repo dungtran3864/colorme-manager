@@ -3,7 +3,7 @@ import * as env from '../constants/env';
 
 export function loadWorkShift(baseId, genId, token) {
   let url =
-    env.MANAGE_API_URL_V3 +
+    env.MANAGE_API_URL +
     '/work-shift/current-shifts?base_id=' +
     baseId +
     '&gen_id=' +
@@ -15,7 +15,7 @@ export function loadWorkShift(baseId, genId, token) {
 
 export function registerWorkShift(workShiftId, token) {
   let url =
-    env.MANAGE_API_URL_V3 +
+    env.MANAGE_API_URL +
     '/work-shift/register-shift/' +
     workShiftId +
     '?token=' +
@@ -25,7 +25,7 @@ export function registerWorkShift(workShiftId, token) {
 
 export function removeWorkShift(workShiftId, token) {
   let url =
-    env.MANAGE_API_URL_V3 +
+    env.MANAGE_API_URL +
     '/work-shift/remove-register-shift/' +
     workShiftId +
     '?token=' +
